@@ -86,7 +86,7 @@
     <h1>Receitas cadastradas!</h1>
     {% for recipe in recipes %}
         <div class="recipe-item">
-            {% if recipe-image %}
+            {% if recipe.image %}
             <img src="{{ recipe.image.url }}" alt="">
             {% endif %}
             <div class="recipe-content">
@@ -96,9 +96,12 @@
  
             <p><strong>Ingredientes:</strong>{{recipe.ingredients}}</p>
             <p><strong>Instruções:</strong>{{recipe.instructions}}</p>
+            </div>
+        </div>
             <hr>
-    {% empty %}
-        <p>Nenhuma receita cadastrada.</p>
-    {% endfor %}
+        {% empty %}
+            <p class="empty-message">Nenhuma receita cadastrada.</p>
+        {% endfor %}
+    </div>
 </body>
 </html>
