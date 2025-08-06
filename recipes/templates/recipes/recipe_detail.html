@@ -19,8 +19,8 @@
     <div class="container">
         <a href="{% url 'recipe_list'%}" class="back-link"> ⬅ volta para a lista de recitas </a>
         <h1>{{recipe.title}}</h1>
-        {% if recipe.imagem %}
-            <img src="{{recipe.imagem.url }}" alt="imagem de {{receita.title}}">
+        {% if recipe.image %}
+            <img src="{{recipe.image.url }}" alt="image de {{receita.title}}">
         {% endif %} 
         
         <p><strong> Tempo de Preparo:</strong>{{recipe.cooking_time}} minutos</p>
